@@ -32,7 +32,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedUser);
     }
 
-    @GetMapping("/users/{username}")
+    @GetMapping("/api/users/{username}")
     public ResponseEntity<User> getUserByUsername(@PathVariable("username") String username) {
         User user = userRepository.findUsernameByUsername(username);
         if (user != null) {
