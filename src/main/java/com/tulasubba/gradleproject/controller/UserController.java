@@ -26,7 +26,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    //Retrieving users information
+    //Post users information
     @PostMapping("/api/users")
     public ResponseEntity<User> addUser(@RequestBody User user){
         User savedUser = userService.addUser(user);
