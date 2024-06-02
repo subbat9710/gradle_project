@@ -21,7 +21,6 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    //Retrieving user information
     @GetMapping("/api/users")
     public List<User> getAllUsers(){
         return userService.getAllUsers();
